@@ -1,0 +1,27 @@
+// 1. После сборки всех картинок (png) (из макета) запусти таск "Gulp webp" - чтобы конвертировать все файлы .png в .webp и потом удалить всех .png файлов.
+
+// 2. Адаптивное изображение по Ширине и Высоте ----------------------->>>
+
+// Контейнер картинки
+.cards__image
+	margin-bottom: 20px
+	padding-bottom: 60% // Высота картинки
+	overflow: hidden
+	position: relative
+
+// Картинка
+.cards__image img
+	width: 100%
+	height: 100%
+	object-fit: cover // Заполнение по центру
+	position: absolute
+	top: 0
+	left: 0
+
+
+// Адаптивное подключение картинки по ширине ----------------------->>>
+<picture>
+	<source srcset="img/1300x400.jpg" type="image/jpeg" media="(min-width:1300px)">
+	<source srcset="img/800x400.jpg" type="image/jpeg" media="(min-width:992px)">
+	<source srcset="img/400x600.jpg" type="image/jpeg" media="(min-width:360px)">
+</picture>

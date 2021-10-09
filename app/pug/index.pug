@@ -1,0 +1,21 @@
+extends template
+
+//- include index/block_name
+
+include components/modals
+
+block head
+	head
+		+head({
+			"title": "Gulp template",
+			"author": "Author",
+			"description": "Description of the site"
+		})
+
+block content
+	//- +block_name()
+
+	+modals()
+
+
+

@@ -1,0 +1,27 @@
+mixin head(data)
+	title= data.title
+	meta(charset="utf-8")
+
+	meta(content=data.author name="author")
+	meta(content=data.description name="description")
+
+	meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	meta(name="HandheldFriendly" content="true")
+	meta(name="format-detection", content="telephone=no")
+	meta(content="IE=edge" http-equiv="X-UA-Compatible")
+	link(rel="icon", href="img/icons/favicon.webp" type="image/webp")
+
+	//- Подключение шрифтов
+	link(rel="preload" href="fonts/Montserrat/Montserrat-Light.woff2" crossorigin="anonymous" as="font" type="font/woff2")
+	link(rel="preload" href="fonts/Montserrat/Montserrat-Regular.woff2" crossorigin="anonymous" as="font" type="font/woff2")
+
+	//- Библиотеки
+	//- link(rel="stylesheet", href="js/libs/swiper/swiper-bundle.min.css")
+	//- link(rel="stylesheet", href="js/libs/aos/aos.css")
+	//- link(rel="stylesheet" href="js/libs/hystmodal/hystmodal.min.css")
+	//- link(rel="stylesheet", href="css/lightgallery-bundle.min.css")
+
+	//- // build:css style.css
+	link(rel="stylesheet", href="css/style.css")
+	//- // endbuild
+
